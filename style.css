@@ -204,6 +204,7 @@ button:disabled {
   margin-bottom: 15px;
 }
 
+/* Table Styles */
 table {
   width: 100%;
   border-collapse: collapse; /* allows cell borders to be merged */
@@ -227,16 +228,19 @@ table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
+/* GPA Display Styling */
 #gpa-display {
   font-size: 1.2em;
   font-weight: bold;
 }
 
+/* Search Bar */
 .search-bar {
   display: flex;
   margin-bottom: 10px;
 }
 
+/* Section Visibility Control */
 .section {
   display: none;
 }
@@ -245,8 +249,9 @@ table tbody tr:nth-child(even) {
   display: block;
 }
 
+/* Tab Navigation */
 .tabs {
-  display: flex;
+  display: flex; /* arrange tabs horizontally */
   margin-bottom: 20px;
 }
 
@@ -299,6 +304,7 @@ table tbody tr:nth-child(even) {
   }
 }
 
+/* Filtering Section */
 .filtering-section {
   display: flex;
   flex-wrap: wrap;
@@ -308,7 +314,7 @@ table tbody tr:nth-child(even) {
 }
 
 .filter-group {
-  flex: 1;
+  flex: 1; /* equal width for filter groups */
 }
 
 .filter-group label {
@@ -325,6 +331,7 @@ table tbody tr:nth-child(even) {
   border-radius: 4px;
 }
 
+/* Statistics Section */
 #statistics {
   padding-top: 20px;
 }
@@ -333,6 +340,7 @@ table tbody tr:nth-child(even) {
   padding-top: 10px;
 }
 
+/* Footer */
 footer {
   background-color: #330f06;
   height: 100px;
@@ -342,8 +350,9 @@ footer {
   margin-top: auto;
 }
 
+/* Modal Dialogs */
 .modal {
-  display: none;
+  display: none; /* hide modal by default */
   position: fixed;
   left: 0;
   top: 0;
@@ -375,6 +384,7 @@ footer {
   text-decoration: none;
 }
 
+/* Responsive Design for Medium Screens 768px and below */
 @media screen and (max-width: 768px) {
   .table-container {
     width: 100%;
@@ -450,6 +460,7 @@ footer {
   }
 }
 
+/* Responsive Design for Small Screens 480px and below */
 @media screen and (max-width: 480px) {
   .table-container {
     max-width: 100%;
