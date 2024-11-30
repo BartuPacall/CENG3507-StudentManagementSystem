@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata and links to external stylesheets and scripts -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header section displaying school logo, name, and user profile -->
+      <header class="header">
+        <div class="left-section">
+          <img src="assets/logo.webp" alt="School Logo" class="logo" />
+          <span class="school-name">Jujutsu High School</span>
+        </div>
+        <div class="right-section">
+          <img
+            src="assets/profile.png"
+            alt="Profile Picture"
+            class="profile-pic"
+          />
+          <span class="user-name">Geto Suguru</span>
+          <a href="index.html"
+            ><img class="home" src="assets/house.png" alt="home-icon"
+          /></a>
+        </div>
+      </header>
+
+      <!-- Main container for tabs and their content -->
+      <div class="tab-container">
+        <!-- Sidebar for navigation between tabs -->
+        <aside>
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="create-lecture">
+              Create Lecture
+            </button>
+            <button class="tab-btn" data-tab="add-students">
+              Add Students
+            </button>
+            <button class="tab-btn" data-tab="student-list">
+              Student List
+            </button>
+          </div>
+        </aside>
+
+        <!-- Create Lecture Tab -->
+        <div id="create-lecture" class="tab-content active">
+          <h2>Create Course</h2>
+          <!-- Form to add new courses -->
+          <form id="course-form">
+            <label for="courseName">Course Name:</label>
+            <input
+              type="text"
+              id="courseName"
+              placeholder="Exp: Database Management System"
+              required
+            />
+
+            <label class="grading-scales-label">Grading Scales:</label>
+            <div class="grading-scale-selection">
+              <label>
+                <input
+                  type="radio"
+                  name="gradingScale"
+                  value="sevenpointscale"
+                  required
+                />
+                7 Point scale
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="gradingScale"
+                  value="tenpointscale"
+                  required
+                />
+                10 Point scale
+              </label>
+            </div>
+
+            <button type="submit">Add Course</button>
+          </form>
+          <!-- List of existing courses -->
+          <h3 class="current-course-header">Current Courses</h3>
+          <ul id="course-list"></ul>
+        </div>
+
+        <!-- Add Students Tab -->
+        <div id="add-students" class="tab-content">
+          <h2>Add New Student</h2>
+          <!-- Form to add student details -->
+          <form id="student-form">
+            <label for="firstName">Name:</label>
+            <input type="text" id="firstName" required />
+            <label for="lastName">Surname:</label>
+            <input type="text" id="lastName" required />
+            <label for="number">Student ID:</label>
+            <input type="text" id="number" min="0" required />
+            <label for="courseSelect">Select Course:</label>
+            <select id="courseSelect" required>
+              <option value="" disabled selected>Choose a course</option>
+            </select>
+            <label for="midtermScore">Midterm Score:</label>
+            <input type="number" id="midtermScore" min="0" max="100" required />
+            <label for="finalScore">Final Score:</label>
+            <input type="number" id="finalScore" min="0" max="100" required />
+            <button type="submit">Add Student</button>
+          </form>
+        </div>
+
+        <!-- Student List Tab -->
+        <div id="student-list" class="tab-content">
+          <h2>Students Table</h2>
+          <!-- Section for filtering and searching students -->
+          <div class="filtering-section">
+            <div class="filter-group">
+              <label for="nameSearch">Search:</label>
+              <input
+                type="text"
+                id="nameSearch"
+                placeholder="Search what do you want"
+              />
+            </div>
+
+            <div class="filter-group">
+              <label for="courseFilter">Filter by course:</label>
+              <select id="courseFilter">
+                <option value="">All Courses</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table displaying student data -->
+          <div class="table-wrapper">
+            <table id="student-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>ID</th>
+                  <th>Course</th>
+                  <th>Midterm</th>
+                  <th>Final</th>
+                  <th>Grade</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <!-- student and class statistics for exams  -->
+          <div id="statistics">
+            <p>Number of passed students: <span id="passedCount">0</span></p>
+            <p>Number of failed students: <span id="failedCount">0</span></p>
+            <p>Mean score of the entire class: <span id="meanScore">0</span></p>
+          </div>
+          <!-- Dropdown to select student -->
+          <div class="studentDropdown">
+            <label for="studentDropdown">Choose Student:</label>
+            <select id="studentDropdown">
+              <option value="" disabled selected>Select Student</option>
+            </select>
+          </div>
+          <div>
+            <p>Selected Student GPA's: <span id="selectedGPA">-</span></p>
+          </div>
+
+          <!-- Modal for editing student information -->
+          <div id="edit-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <!--for create close button (x)-->
+              <h3>Edit Student Information</h3>
+              <form id="edit-student-form">
+                <label for="editFirstName">Name:</label>
+                <input type="text" id="editFirstName" required />
+                <label for="editLastName">Surname:</label>
+                <input type="text" id="editLastName" required />
+                <label for="editNumber">Student ID:</label>
+                <input type="text" id="editNumber" min="0" required />
+                <label for="editMidtermScore">Midterm:</label>
+                <input
+                  type="number"
+                  id="editMidtermScore"
+                  min="0"
+                  max="100"
+                  required
+                />
+                <label for="editFinalScore">Final:</label>
+                <input
+                  type="number"
+                  id="editFinalScore"
+                  min="0"
+                  max="100"
+                  required
+                />
+                <button type="submit">Update</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

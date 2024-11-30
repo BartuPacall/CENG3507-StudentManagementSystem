@@ -1,0 +1,495 @@
+/* global reset for margins and border-box sizing */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body styling */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* header styling with flexible layout */
+.header {
+  display: flex;
+  flex-wrap: wrap; /*it allows flex items to wrap onto multiple lines */
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(69, 5, 5);
+  padding: 10px 20px;
+}
+
+/* styling for left and right sections of the header */
+.left-section,
+.right-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* logo styling */
+.logo {
+  height: 120px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+}
+
+/* styling for school name in the header */
+.school-name {
+  color: white;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+/* profile picture styling */
+.profile-pic {
+  height: 120px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+}
+
+/* username text styling */
+.user-name {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+}
+
+.home {
+  width: 60px;
+  height: 60px;
+  padding-bottom: 10px;
+}
+
+/* container for tabs and main content */
+.tab-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* tab part buttons styling */
+.tabs {
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*tab button styling*/
+.tab-btn {
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /*turns the mouse cursor into a hand icon*/
+}
+
+/* hover effect for tab buttons */
+.tab-btn:hover {
+  background-color: #0056b3;
+}
+
+.tab-btn.active {
+  background-color: #0056b3;
+}
+
+.current-course-header {
+  padding-top: 10px;
+}
+
+/*aside styling*/
+aside {
+  flex: 1; /*allows the element to grow, shrink, and take equal space*/
+  background-color: rgb(87, 39, 39);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="number"],
+select {
+  display: block; /*element take full width and start on a new line*/
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem; /*1 rem 16px*/
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* General button styling */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #8a2b2b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #bf5757;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed; /*it show 'not allowed' cursor to indicate no interaction */
+}
+
+/* Add course form styling */
+.add-course {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.add-course h2 {
+  font-size: 1.5rem;
+  color: #8a2b2b;
+  margin-bottom: 15px;
+}
+
+.course-list li {
+  margin-right: 5px;
+}
+
+/* Add student form styling */
+.add-student {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.add-student h2 {
+  font-size: 1.5rem;
+  color: #8a2b2b;
+  margin-bottom: 15px;
+}
+
+.student-list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*rgba A is transparency of elements*/
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.student-list h2 {
+  font-size: 1.5rem;
+  color: #8a2b2b;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* allows cell borders to be merged */
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #8a2b2b;
+  color: white;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#gpa-display {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #471406ed;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.3s ease; /*timing function*/
+}
+
+.tab-btn.active {
+  background-color: #471406ed;
+  color: white;
+}
+
+.tab-btn:hover {
+  background-color: #170844;
+}
+
+.tab-content {
+  display: none;
+  overflow: scroll;
+}
+
+.tab-content.active {
+  flex: 5;
+  display: block;
+  padding: 20px;
+  font-size: medium;
+}
+
+.tab-content.active h2 {
+  padding-bottom: 10px;
+}
+
+.grading-scale-selection {
+  margin: 10px 0 10px 0; /*margin(top, right, bottom, left)*/
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /*invisible this part*/
+  }
+  to {
+    opacity: 1; /*visible*/
+  }
+}
+
+.filtering-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.filter-group {
+  flex: 1;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#statistics {
+  padding-top: 20px;
+}
+
+.studentDropdown {
+  padding-top: 10px;
+}
+
+footer {
+  background-color: #330f06;
+  height: 100px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .school-name {
+    font-size: 24px;
+  }
+
+  .profile-pic {
+    height: 80px;
+  }
+
+  .user-name {
+    font-size: 18px;
+  }
+
+  .home {
+    width: 50px;
+    height: 50px;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .tab-container {
+    flex-direction: column;
+  }
+  aside {
+    flex: unset; /*returns to default state*/
+    align-items: unset;
+    max-width: none;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .school-name {
+    font-size: 20px;
+  }
+
+  .profile-pic {
+    height: 70px;
+  }
+
+  .user-name {
+    font-size: 16px;
+  }
+
+  .home {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-bar button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  table th,
+  table td {
+    padding: 6px;
+  }
+}
