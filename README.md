@@ -10,14 +10,13 @@ Live Link: https://bartupacall.github.io/CENG3507-StudentManagementSystem/
 
 ![image](https://github.com/user-attachments/assets/fc894a5d-f762-4c5d-bb3a-c50d0d927322)
 
-![image](https://github.com/user-attachments/assets/fb4921a8-ebab-4113-888d-a465ef1c1294)
-
-![image](https://github.com/user-attachments/assets/fe75237c-f928-4fc9-803f-9b4c95904154)
-
-![image](https://github.com/user-attachments/assets/1a7c248a-88b8-401f-913f-99d9fa6481c9)
-
-![image](https://github.com/user-attachments/assets/e5b9ae0b-7bf1-4d94-9570-fc85d2ad0576)
-
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fb4921a8-ebab-4113-888d-a465ef1c1294" alt="Image 1" width="45%">
+  <img src="https://github.com/user-attachments/assets/fe75237c-f928-4fc9-803f-9b4c95904154" alt="Image 2" width="45%">
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1a7c248a-88b8-401f-913f-99d9fa6481c9" alt="Image 3" width="45%">
+  <img src="https://github.com/user-attachments/assets/e5b9ae0b-7bf1-4d94-9570-fc85d2ad0576" alt="Image 4" width="45%">
+</p>
 
 
